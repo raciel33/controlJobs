@@ -1,1 +1,13 @@
-<router-outlet></router-outlet>
+<div class="container main-container">
+    <div class="col-md-12 text-end" *ngIf="_controlJobsService.usuario.uid">
+        <button type="button" class="btn btn-outline-danger" (click)="_controlJobsService.logout()">
+   Salir</button>
+    </div>
+    <app-login *ngIf="!_controlJobsService.usuario.uid"> </app-login>
+    <div class="chat-window " *ngIf="_controlJobsService.usuario.uid">
+        <h1 class="animate__animated animate__bounce"> Hola <span class="text-warning  ">{{_controlJobsService.usuario.nombre}}</span> </h1>
+        <hr>
+        <app-home></app-home>
+    </div>
+
+</div>

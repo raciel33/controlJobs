@@ -1,18 +1,19 @@
 import { HomeComponent } from './components/home/home.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { LoginComponent } from './components/login/login.component';
 
-const APP_ROUTES: Routes = [
-  { path: 'home', component: HomeComponent },
-  { path: '**', pathMatch: 'full', redirectTo:'home' },
+const routes: Routes = [
+  { path: 'home',component:HomeComponent },
+  { path: 'navbar',component:NavbarComponent },
+  { path: 'login',component:LoginComponent },
 
+  { path: '**', pathMatch: 'full', redirectTo: 'login' },
 
 ];
 
-@NgModule({
-  imports: [RouterModule.forRoot(APP_ROUTES)],
-  exports: [RouterModule]
-})
-export class AppRoutingModule {
 
- }
+
+export const APP_ROUTES = RouterModule.forRoot( routes );
+

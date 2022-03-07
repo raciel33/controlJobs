@@ -1,1 +1,19 @@
 <app-navbar></app-navbar>
+<div class="main-container">
+    <button [routerLink]="['/modal','sabado' ]" type="button" class="btn btn-outline-primary ms-2">
+    + Sábados
+   </button>
+    <button [routerLink]="['/modal','domingo']" type="button" class="btn btn-outline-danger ms-2">
+    + Domingos
+   </button>
+    <button [routerLink]="['/modal','festivo']" type="button" class="btn btn-outline-danger ms-2">
+    + Festivos
+   </button>
+    <button [routerLink]="['/modal','doblaje']" type="button" class="btn btn-outline-secondary ms-2">
+    + Doblajes
+   </button>
+</div>
+<div class="main-container row">
+    <app-calendario class="col"></app-calendario>
+    <app-graphic class="col"></app-graphic>
+</div>

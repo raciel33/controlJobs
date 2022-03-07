@@ -1,0 +1,38 @@
+<div class="col-md-12 text-end">
+    <button type="button" class="btn btn-outline-success" [routerLink]="['/home']">
+Volver</button>
+</div>
+<div class="row">
+    <div class="col">
+        <!--Calendario-->
+        <mat-calendar class="demo-inline-calendar-card bg-body text-black" [(selected)]="selected"></mat-calendar>
+
+    </div>
+    <div class="col">
+        <!--Boton para ir seleccionando los sabados que se van a añadir-->
+        <button (click)="anadir()" type="button" class="btn btn-outline-primary">
+    Añadir</button>
+    </div>
+
+    <!--Contenedor donde se muestran los dias seleccionados-->
+    <div class="col ml-1 mt-4">
+        <div class="card bg">
+            <h2 class="card-title text-center"> Horas Extras</h2>
+            <table class="table  table table-hover">
+                <thead class="thead-inverse">
+                </thead>
+                <tbody>
+                    <tr *ngFor="let item of valor">
+                        <td class="text-warning">{{ item | date }} </td>
+                        <td>
+                            <button (click)="eliminar()" type="button" class="btn btn-outline-danger ms-2">
+                      Eliminar
+                     </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <button (click)="guardar()" type="submit" class="btn btn-primary">
+              Guardar</button>
+        </div>
+    </div>

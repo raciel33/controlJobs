@@ -1,13 +1,17 @@
-<div class="container main-container">
+<div class="container main-container" [ngClass]="{'bg-light , text-black':!noche,'bg-dark':noche }">
     <div class="col-md-12 text-end" *ngIf="_controlJobsService.usuario.uid">
+        <button [ngClass]="{'btn-outline-warning':!noche,'btn-outline-primary':noche }" class="btn mx-3" (click)=" cambioNocheDia()">
+         <i [ngClass]="{'fa-sun':!noche,'fa-moon':noche }"class="fas"></i>
+        </button>
         <button type="button" class="btn btn-outline-danger" (click)="_controlJobsService.logout()">
    Salir</button>
     </div>
+
     <app-login *ngIf="!_controlJobsService.usuario.uid"> </app-login>
     <div class="chat-window " *ngIf="_controlJobsService.usuario.uid">
         <h1 class="animate__animated animate__bounce"> Hola <span class="text-warning  ">{{_controlJobsService.usuario.nombre}}</span> </h1>
         <hr>
-        <app-home></app-home>
+        <router-outlet></router-outlet>
     </div>
 
 </div>

@@ -1,0 +1,552 @@
+<!--Se van a mostrar en este contenedor las horas segun el valor del parametro id
+  (sabado,domingo,doblaje,festivo)-->
+<div [ngSwitch]="id">
+
+    <div *ngSwitchCase="'sabado'">
+
+        <h2 class="text-success text-center">Sabados</h2>
+        <!--Se agrupan los dias trabajados por mes-->
+        <h3 class="text-danger">Enero : </h3>
+        <div *ngFor="let item of sabados | keys;let i=index" class="">
+            <ul class="list-group" *ngFor="let mes of [sabados[item] | date:'MM']">
+                <li *ngIf="mes == '01'  " class="list-group-item">{{ sabados[item] | date:'dd-MM-YYYY'}}
+                    <button mat-raised-button (click)="openDialog( item, sabados[item] )" class="btn btn-outline-danger p-0 border-0 position-absolute top-0 end-0">
+                    <mat-icon aria-hidden="false" aria-label="Example home icon">delete</mat-icon>
+              </button>
+                </li>
+            </ul>
+        </div>
+        <hr>
+        <h3 class="text-danger">Febrero </h3>
+        <div *ngFor="let item of sabados | keys;let i=index" class="">
+            <ul class="list-group" *ngFor="let mes of [sabados[item] | date:'MM']">
+                <li *ngIf="mes == '02'  " class="list-group-item">{{ sabados[item] | date:'dd-MM-YYYY'}}
+                    <button mat-raised-button (click)="openDialog( item,sabados[item] )" class="btn btn-outline-danger p-0 border-0 position-absolute top-0 end-0">
+                    <mat-icon aria-hidden="false" aria-label="Example home icon">delete</mat-icon>
+              </button>
+                </li>
+            </ul>
+        </div>
+        <hr>
+        <h3 class="text-danger">Marzo: </h3>
+        <div *ngFor="let item of sabados | keys;let i=index" class="">
+            <ul class="list-group" *ngFor="let mes of [sabados[item] | date:'MM']">
+                <li *ngIf="mes == '03'" class="list-group-item">{{ sabados[item] | date:'dd-MM-YYYY'}}
+                    <button mat-raised-button (click)="openDialog( item,sabados[item] )" class="btn btn-outline-danger p-0 border-0 position-absolute top-0 end-0">
+                    <mat-icon aria-hidden="false" aria-label="Example home icon">delete</mat-icon>
+              </button>
+                </li>
+            </ul>
+        </div>
+        <hr>
+        <h3 class="text-danger">Abril</h3>
+        <div *ngFor="let item of sabados | keys;let i=index" class="">
+            <ul class="list-group" *ngFor="let mes of [sabados[item] | date:'MM']">
+                <li *ngIf="mes == '04'" class="list-group-item">{{ sabados[item] | date:'dd-MM-YYYY'}}
+                    <button mat-raised-button (click)="openDialog( item,sabados[item] )" class="btn btn-outline-danger p-0 border-0 position-absolute top-0 end-0">
+                    <mat-icon aria-hidden="false" aria-label="Example home icon">delete</mat-icon>
+              </button>
+                </li>
+            </ul>
+        </div>
+        <hr>
+        <h3 class="text-danger">Mayo</h3>
+        <div *ngFor="let item of sabados | keys;let i=index" class="">
+            <ul class="list-group" *ngFor="let mes of [sabados[item] | date:'MM']">
+                <li *ngIf="mes == '05'" class="list-group-item">{{ sabados[item] | date:'dd-MM-YYYY'}}
+                    <button mat-raised-button (click)="openDialog(item, sabados[item] )" class="btn btn-outline-danger p-0 border-0 position-absolute top-0 end-0">
+                    <mat-icon aria-hidden="false" aria-label="Example home icon">delete</mat-icon>
+              </button>
+                </li>
+            </ul>
+        </div>
+        <hr>
+        <h3 class="text-danger">Junio</h3>
+        <div *ngFor="let item of sabados | keys;let i=index" class="">
+            <ul class="list-group" *ngFor="let mes of [sabados[item] | date:'MM']">
+                <li *ngIf="mes == '06'" class="list-group-item">{{ sabados[item] | date:'dd-MM-YYYY'}}
+                    <button mat-raised-button (click)="openDialog( item,sabados[item] )" class="btn btn-outline-danger p-0 border-0 position-absolute top-0 end-0">
+                    <mat-icon aria-hidden="false" aria-label="Example home icon">delete</mat-icon>
+              </button>
+                </li>
+            </ul>
+        </div>
+        <hr>
+        <h3 class="text-danger">Julio</h3>
+        <div *ngFor="let item of sabados | keys;let i=index" class="">
+            <ul class="list-group" *ngFor="let mes of [sabados[item] | date:'MM']">
+                <li *ngIf="mes == '07'" class="list-group-item">{{ sabados[item] | date:'dd-MM-YYYY'}}
+                    <button mat-raised-button (click)="openDialog(  item,sabados[item])" class="btn btn-outline-danger p-0 border-0 position-absolute top-0 end-0">
+                    <mat-icon aria-hidden="false" aria-label="Example home icon">delete</mat-icon>
+              </button>
+                </li>
+            </ul>
+        </div>
+        <hr>
+        <h3 class="text-danger">Agosto</h3>
+        <div *ngFor="let item of sabados | keys;let i=index" class="">
+            <ul class="list-group" *ngFor="let mes of [sabados[item] | date:'MM']">
+                <li *ngIf="mes == '08'" class="list-group-item">{{ sabados[item] | date:'dd-MM-YYYY'}}
+                    <button mat-raised-button (click)="openDialog( item,sabados[item] )" class="btn btn-outline-danger p-0 border-0 position-absolute top-0 end-0">
+                    <mat-icon aria-hidden="false" aria-label="Example home icon">delete</mat-icon>
+              </button>
+                </li>
+            </ul>
+        </div>
+        <hr>
+        <h3 class="text-danger">Septiembre</h3>
+        <div *ngFor="let item of sabados | keys;let i=index" class="">
+            <ul class="list-group" *ngFor="let mes of [sabados[item] | date:'MM']">
+                <li *ngIf="mes == '09'" class="list-group-item">{{ sabados[item] | date:'dd-MM-YYYY'}}
+                    <button mat-raised-button (click)="openDialog( item,sabados[item] )" class="btn btn-outline-danger p-0 border-0 position-absolute top-0 end-0">
+                    <mat-icon aria-hidden="false" aria-label="Example home icon">delete</mat-icon>
+              </button>
+                </li>
+            </ul>
+        </div>
+        <hr>
+        <h3 class="text-danger">Octubre</h3>
+        <div *ngFor="let item of sabados | keys;let i=index" class="">
+            <ul class="list-group" *ngFor="let mes of [sabados[item] | date:'MM']">
+                <li *ngIf="mes == '10'" class="list-group-item">{{ sabados[item] | date:'dd-MM-YYYY'}}
+                    <button mat-raised-button (click)="openDialog( item,sabados[item] )" class="btn btn-outline-danger p-0 border-0 position-absolute top-0 end-0">
+                    <mat-icon aria-hidden="false" aria-label="Example home icon">delete</mat-icon>
+              </button>
+                </li>
+            </ul>
+        </div>
+        <hr>
+        <h3 class="text-danger">Noviembre</h3>
+        <div *ngFor="let item of sabados | keys;let i=index" class="">
+            <ul class="list-group" *ngFor="let mes of [sabados[item] | date:'MM']">
+                <li *ngIf="mes == '11'" class="list-group-item">{{ sabados[item] | date:'dd-MM-YYYY'}}
+                    <button mat-raised-button (click)="openDialog( item,sabados[item] )" class="btn btn-outline-danger p-0 border-0 position-absolute top-0 end-0">
+                    <mat-icon aria-hidden="false" aria-label="Example home icon">delete</mat-icon>
+              </button>
+                </li>
+            </ul>
+        </div>
+        <hr>
+        <h3 class="text-danger">Diciembre</h3>
+        <div *ngFor="let item of sabados | keys;let i=index" class="">
+            <ul class="list-group" *ngFor="let mes of [sabados[item] | date:'MM']">
+                <li *ngIf="mes == '12'" class="list-group-item">{{ sabados[item] | date:'dd-MM-YYYY'}}
+                    <button mat-raised-button (click)="openDialog( item,sabados[item] )" class="btn btn-outline-danger p-0 border-0 position-absolute top-0 end-0">
+                    <mat-icon aria-hidden="false" aria-label="Example home icon">delete</mat-icon>
+              </button>
+                </li>
+            </ul>
+        </div>
+        <hr>
+    </div>
+    <div *ngSwitchCase="'domingo'">
+        <h2 class="text-success text-center">Domingos</h2>
+        <!--Se agrupan los dias trabajados por mes-->
+        <h3 class="text-danger">Enero : </h3>
+        <div *ngFor="let item of domingos | keys;let i=index" class="">
+            <ul class="list-group" *ngFor="let mes of [domingos[item] | date:'MM']">
+                <li *ngIf="mes == '01'  " class="list-group-item">{{ domingos[item] | date:'dd-MM-YYYY'}}
+                    <button mat-raised-button (click)="openDialog( item,domingos[item] )" class="btn btn-outline-danger p-0 border-0 position-absolute top-0 end-0">
+                    <mat-icon aria-hidden="false" aria-label="Example home icon">delete</mat-icon>
+              </button>
+
+                </li>
+            </ul>
+        </div>
+        <hr>
+        <h3 class="text-danger">Febrero </h3>
+        <div *ngFor="let item of domingos | keys;let i=index" class="">
+            <ul class="list-group" *ngFor="let mes of [domingos[item] | date:'MM']">
+                <li *ngIf="mes == '02'  " class="list-group-item">{{ domingos[item] | date:'dd-MM-YYYY'}}
+                    <button mat-raised-button (click)="openDialog(item, domingos[item] )" class="btn btn-outline-danger p-0 border-0 position-absolute top-0 end-0">
+                    <mat-icon aria-hidden="false" aria-label="Example home icon">delete</mat-icon>
+              </button>
+                </li>
+            </ul>
+        </div>
+        <hr>
+        <h3 class="text-danger">Marzo: </h3>
+        <div *ngFor="let item of domingos | keys;let i=index" class="">
+            <ul class="list-group" *ngFor="let mes of [domingos[item] | date:'MM']">
+                <li *ngIf="mes == '03'" class="list-group-item">{{ domingos[item] | date:'dd-MM-YYYY'}}
+                    <button mat-raised-button (click)="openDialog(item, domingos[item] )" class="btn btn-outline-danger p-0 border-0 position-absolute top-0 end-0">
+                    <mat-icon aria-hidden="false" aria-label="Example home icon">delete</mat-icon>
+              </button>
+                </li>
+            </ul>
+        </div>
+        <hr>
+        <h3 class="text-danger">Abril</h3>
+        <div *ngFor="let item of domingos | keys;let i=index" class="">
+            <ul class="list-group" *ngFor="let mes of [domingos[item] | date:'MM']">
+                <li *ngIf="mes == '04'" class="list-group-item">{{ domingos[item] | date:'dd-MM-YYYY'}}
+                    <button mat-raised-button (click)="openDialog( item , domingos[item])" class="btn btn-outline-danger p-0 border-0 position-absolute top-0 end-0">
+                  <mat-icon aria-hidden="false" aria-label="Example home icon">delete</mat-icon>
+            </button>
+                </li>
+            </ul>
+        </div>
+        <hr>
+        <h3 class="text-danger">Mayo</h3>
+        <div *ngFor="let item of domingos | keys;let i=index" class="">
+            <ul class="list-group" *ngFor="let mes of [domingos[item] | date:'MM']">
+                <li *ngIf="mes == '05'" class="list-group-item">{{ domingos[item] | date:'dd-MM-YYYY'}}
+                    <button mat-raised-button (click)="openDialog(item, domingos[item]  )" class="btn btn-outline-danger p-0 border-0 position-absolute top-0 end-0">
+                    <mat-icon aria-hidden="false" aria-label="Example home icon">delete</mat-icon>
+              </button>
+                </li>
+            </ul>
+        </div>
+        <hr>
+        <h3 class="text-danger">Junio</h3>
+        <div *ngFor="let item of domingos | keys;let i=index" class="">
+            <ul class="list-group" *ngFor="let mes of [domingos[item] | date:'MM']">
+                <li *ngIf="mes == '06'" class="list-group-item">{{ domingos[item] | date:'dd-MM-YYYY'}}
+                    <button mat-raised-button (click)="openDialog( item,domingos[item]  )" class="btn btn-outline-danger p-0 border-0 position-absolute top-0 end-0">
+                    <mat-icon aria-hidden="false" aria-label="Example home icon">delete</mat-icon>
+              </button>
+                </li>
+            </ul>
+        </div>
+        <hr>
+        <h3 class="text-danger">Julio</h3>
+        <div *ngFor="let item of domingos | keys;let i=index" class="">
+            <ul class="list-group" *ngFor="let mes of [domingos[item] | date:'MM']">
+                <li *ngIf="mes == '07'" class="list-group-item">{{ domingos[item] | date:'dd-MM-YYYY'}}
+                    <button mat-raised-button (click)="openDialog( item,domingos[item]  )" class="btn btn-outline-danger p-0 border-0 position-absolute top-0 end-0">
+                    <mat-icon aria-hidden="false" aria-label="Example home icon">delete</mat-icon>
+              </button>
+                </li>
+            </ul>
+        </div>
+        <hr>
+        <h3 class="text-danger">Agosto</h3>
+        <div *ngFor="let item of domingos | keys;let i=index" class="">
+            <ul class="list-group" *ngFor="let mes of [domingos[item] | date:'MM']">
+                <li *ngIf="mes == '08'" class="list-group-item">{{ domingos[item] | date:'dd-MM-YYYY'}}
+                    <button mat-raised-button (click)="openDialog(item, domingos[item]  )" class="btn btn-outline-danger p-0 border-0 position-absolute top-0 end-0">
+                    <mat-icon aria-hidden="false" aria-label="Example home icon">delete</mat-icon>
+              </button>
+                </li>
+            </ul>
+        </div>
+        <hr>
+        <h3 class="text-danger">Septiembre</h3>
+        <div *ngFor="let item of domingos | keys;let i=index" class="">
+            <ul class="list-group" *ngFor="let mes of [domingos[item] | date:'MM']">
+                <li *ngIf="mes == '09'" class="list-group-item">{{ domingos[item] | date:'dd-MM-YYYY'}}
+                    <button mat-raised-button (click)="openDialog(item, domingos[item]  )" class="btn btn-outline-danger p-0 border-0 position-absolute top-0 end-0">
+                    <mat-icon aria-hidden="false" aria-label="Example home icon">delete</mat-icon>
+              </button>
+                </li>
+            </ul>
+        </div>
+        <hr>
+        <h3 class="text-danger">Octubre</h3>
+        <div *ngFor="let item of domingos | keys;let i=index" class="">
+            <ul class="list-group" *ngFor="let mes of [domingos[item] | date:'MM']">
+                <li *ngIf="mes == '10'" class="list-group-item">{{ domingos[item] | date:'dd-MM-YYYY'}}
+                    <button mat-raised-button (click)="openDialog( item,domingos[item]  )" class="btn btn-outline-danger p-0 border-0 position-absolute top-0 end-0">
+                    <mat-icon aria-hidden="false" aria-label="Example home icon">delete</mat-icon>
+              </button>
+                </li>
+            </ul>
+        </div>
+        <hr>
+        <h3 class="text-danger">Noviembre</h3>
+        <div *ngFor="let item of domingos | keys;let i=index" class="">
+            <ul class="list-group" *ngFor="let mes of [domingos[item] | date:'MM']">
+                <li *ngIf="mes == '11'" class="list-group-item">{{ domingos[item] | date:'dd-MM-YYYY'}}
+                    <button mat-raised-button (click)="openDialog( item,domingos[item]  )" class="btn btn-outline-danger p-0 border-0 position-absolute top-0 end-0">
+                    <mat-icon aria-hidden="false" aria-label="Example home icon">delete</mat-icon>
+              </button>
+                </li>
+            </ul>
+        </div>
+        <hr>
+        <h3 class="text-danger">Diciembre</h3>
+        <div *ngFor="let item of domingos | keys;let i=index" class="">
+            <ul class="list-group" *ngFor="let mes of [domingos[item] | date:'MM']">
+                <li *ngIf="mes == '12'" class="list-group-item">{{ domingos[item] | date:'dd-MM-YYYY'}}
+                    <button mat-raised-button (click)="openDialog( item,domingos[item]  )" class="btn btn-outline-danger p-0 border-0 position-absolute top-0 end-0">
+                    <mat-icon aria-hidden="false" aria-label="Example home icon">delete</mat-icon>
+              </button>
+                </li>
+            </ul>
+        </div>
+        <hr>
+    </div>
+    <div *ngSwitchCase="'doblaje'">
+        <h2 class="text-success text-center">Doblajes</h2>
+        <!--Se agrupan los dias trabajados por mes-->
+        <h3 class="text-danger">Enero : </h3>
+        <div *ngFor="let item of doblaje | keys;let i=index" class="">
+            <ul class="list-group" *ngFor="let mes of [doblaje[item] | date:'MM']">
+                <li *ngIf="mes == '01'  " class="list-group-item">{{ doblaje[item] | date:'dd-MM-YYYY'}}
+                    <button mat-raised-button (click)="openDialog( item,doblaje[item] )" class="btn btn-outline-danger p-0 border-0 position-absolute top-0 end-0">
+                    <mat-icon aria-hidden="false" aria-label="Example home icon">delete</mat-icon>
+              </button>
+                </li>
+            </ul>
+        </div>
+        <hr>
+        <h3 class="text-danger">Febrero </h3>
+        <div *ngFor="let item of doblaje | keys;let i=index" class="">
+            <ul class="list-group" *ngFor="let mes of [doblaje[item] | date:'MM']">
+                <li *ngIf="mes == '02'  " class="list-group-item">{{ doblaje[item] | date:'dd-MM-YYYY'}}
+                    <button mat-raised-button (click)="openDialog( item,doblaje[item] )" class="btn btn-outline-danger p-0 border-0 position-absolute top-0 end-0">
+                    <mat-icon aria-hidden="false" aria-label="Example home icon">delete</mat-icon>
+              </button>
+                </li>
+            </ul>
+        </div>
+        <hr>
+        <h3 class="text-danger">Marzo: </h3>
+        <div *ngFor="let item of doblaje | keys;let i=index" class="">
+            <ul class="list-group" *ngFor="let mes of [doblaje[item] | date:'MM']">
+                <li *ngIf="mes == '03'" class="list-group-item">{{ doblaje[item] | date:'dd-MM-YYYY'}}
+                    <button mat-raised-button (click)="openDialog( item,doblaje[item] )" class="btn btn-outline-danger p-0 border-0 position-absolute top-0 end-0">
+                    <mat-icon aria-hidden="false" aria-label="Example home icon">delete</mat-icon>
+              </button>
+                </li>
+            </ul>
+        </div>
+        <hr>
+        <h3 class="text-danger">Abril</h3>
+        <div *ngFor="let item of doblaje | keys;let i=index" class="">
+            <ul class="list-group" *ngFor="let mes of [doblaje[item] | date:'MM']">
+                <li *ngIf="mes == '04'" class="list-group-item">{{ doblaje[item] | date:'dd-MM-YYYY'}}
+                    <button mat-raised-button (click)="openDialog( item,doblaje[item] )" class="btn btn-outline-danger p-0 border-0 position-absolute top-0 end-0">
+                    <mat-icon aria-hidden="false" aria-label="Example home icon">delete</mat-icon>
+              </button>
+                </li>
+            </ul>
+        </div>
+        <hr>
+        <h3 class="text-danger">Mayo</h3>
+        <div *ngFor="let item of doblaje | keys;let i=index" class="">
+            <ul class="list-group" *ngFor="let mes of [doblaje[item] | date:'MM']">
+                <li *ngIf="mes == '05'" class="list-group-item">{{ doblaje[item] | date:'dd-MM-YYYY'}}
+                    <button mat-raised-button (click)="openDialog( item,doblaje[item] )" class="btn btn-outline-danger p-0 border-0 position-absolute top-0 end-0">
+                    <mat-icon aria-hidden="false" aria-label="Example home icon">delete</mat-icon>
+              </button>
+                </li>
+            </ul>
+        </div>
+        <hr>
+        <h3 class="text-danger">Junio</h3>
+        <div *ngFor="let item of doblaje | keys;let i=index" class="">
+            <ul class="list-group" *ngFor="let mes of [doblaje[item] | date:'MM']">
+                <li *ngIf="mes == '06'" class="list-group-item">{{ doblaje[item] | date:'dd-MM-YYYY'}}
+                    <button mat-raised-button (click)="openDialog(item, doblaje[item] )" class="btn btn-outline-danger p-0 border-0 position-absolute top-0 end-0">
+                    <mat-icon aria-hidden="false" aria-label="Example home icon">delete</mat-icon>
+              </button>
+                </li>
+            </ul>
+        </div>
+        <hr>
+        <h3 class="text-danger">Julio</h3>
+        <div *ngFor="let item of doblaje | keys;let i=index" class="">
+            <ul class="list-group" *ngFor="let mes of [doblaje[item] | date:'MM']">
+                <li *ngIf="mes == '07'" class="list-group-item">{{ doblaje[item] | date:'dd-MM-YYYY'}}
+                    <button mat-raised-button (click)="openDialog( item,doblaje[item] )" class="btn btn-outline-danger p-0 border-0 position-absolute top-0 end-0">
+                    <mat-icon aria-hidden="false" aria-label="Example home icon">delete</mat-icon>
+              </button>
+                </li>
+            </ul>
+        </div>
+        <hr>
+        <h3 class="text-danger">Agosto</h3>
+        <div *ngFor="let item of doblaje | keys;let i=index" class="">
+            <ul class="list-group" *ngFor="let mes of [doblaje[item] | date:'MM']">
+                <li *ngIf="mes == '08'" class="list-group-item">{{ doblaje[item] | date:'dd-MM-YYYY'}}
+                    <button mat-raised-button (click)="openDialog(item, doblaje[item] )" class="btn btn-outline-danger p-0 border-0 position-absolute top-0 end-0">
+                    <mat-icon aria-hidden="false" aria-label="Example home icon">delete</mat-icon>
+              </button>
+                </li>
+            </ul>
+        </div>
+        <hr>
+        <h3 class="text-danger">Septiembre</h3>
+        <div *ngFor="let item of doblaje | keys;let i=index" class="">
+            <ul class="list-group" *ngFor="let mes of [doblaje[item] | date:'MM']">
+                <li *ngIf="mes == '09'" class="list-group-item">{{ doblaje[item] | date:'dd-MM-YYYY'}}
+                    <button mat-raised-button (click)="openDialog( item,doblaje[item] )" class="btn btn-outline-danger p-0 border-0 position-absolute top-0 end-0">
+                    <mat-icon aria-hidden="false" aria-label="Example home icon">delete</mat-icon>
+              </button>
+                </li>
+            </ul>
+        </div>
+        <hr>
+        <h3 class="text-danger">Octubre</h3>
+        <div *ngFor="let item of doblaje | keys;let i=index" class="">
+            <ul class="list-group" *ngFor="let mes of [doblaje[item] | date:'MM']">
+                <li *ngIf="mes == '10'" class="list-group-item">{{ doblaje[item] | date:'dd-MM-YYYY'}}
+                    <button mat-raised-button (click)="openDialog( item,doblaje[item] )" class="btn btn-outline-danger p-0 border-0 position-absolute top-0 end-0">
+                    <mat-icon aria-hidden="false" aria-label="Example home icon">delete</mat-icon>
+              </button>
+                </li>
+            </ul>
+        </div>
+        <hr>
+        <h3 class="text-danger">Noviembre</h3>
+        <div *ngFor="let item of doblaje | keys;let i=index" class="">
+            <ul class="list-group" *ngFor="let mes of [doblaje[item] | date:'MM']">
+                <li *ngIf="mes == '11'" class="list-group-item">{{ doblaje[item] | date:'dd-MM-YYYY'}}
+                    <button mat-raised-button (click)="openDialog( item,doblaje[item] )" class="btn btn-outline-danger p-0 border-0 position-absolute top-0 end-0">
+                    <mat-icon aria-hidden="false" aria-label="Example home icon">delete</mat-icon>
+              </button>
+                </li>
+            </ul>
+        </div>
+        <hr>
+        <h3 class="text-danger">Diciembre</h3>
+        <div *ngFor="let item of doblaje | keys;let i=index" class="">
+            <ul class="list-group" *ngFor="let mes of [doblaje[item] | date:'MM']">
+                <li *ngIf="mes == '12'" class="list-group-item">{{ doblaje[item] | date:'dd-MM-YYYY'}}
+                    <button mat-raised-button (click)="openDialog( item,doblaje[item] )" class="btn btn-outline-danger p-0 border-0 position-absolute top-0 end-0">
+                    <mat-icon aria-hidden="false" aria-label="Example home icon">delete</mat-icon>
+              </button>
+                </li>
+            </ul>
+        </div>
+        <hr>
+    </div>
+    <div *ngSwitchCase="'festivo'">
+        <h2 class="text-success text-center">Festivos</h2>
+        <!--Se agrupan los dias trabajados por mes-->
+        <h3 class="text-danger">Enero : </h3>
+        <div *ngFor="let item of festivo | keys;let i=index" class="">
+            <ul class="list-group" *ngFor="let mes of [festivo[item] | date:'MM']">
+                <li *ngIf="mes == '01'  " class="list-group-item">{{ festivo[item] | date:'dd-MM-YYYY'}}
+                    <button mat-raised-button (click)="openDialog( item, festivo[item] )" class="btn btn-outline-danger p-0 border-0 position-absolute top-0 end-0">
+                    <mat-icon aria-hidden="false" aria-label="Example home icon">delete</mat-icon>
+              </button>
+                </li>
+            </ul>
+        </div>
+        <hr>
+        <h3 class="text-danger">Febrero </h3>
+        <div *ngFor="let item of festivo | keys;let i=index" class="">
+            <ul class="list-group" *ngFor="let mes of [festivo[item] | date:'MM']">
+                <li *ngIf="mes == '02'  " class="list-group-item">{{ festivo[item] | date:'dd-MM-YYYY'}}
+                    <button mat-raised-button (click)="openDialog(  item,festivo[item] )" class="btn btn-outline-danger p-0 border-0 position-absolute top-0 end-0">
+                    <mat-icon aria-hidden="false" aria-label="Example home icon">delete</mat-icon>
+              </button>
+                </li>
+            </ul>
+        </div>
+        <hr>
+        <h3 class="text-danger">Marzo: </h3>
+        <div *ngFor="let item of festivo | keys;let i=index" class="">
+            <ul class="list-group" *ngFor="let mes of [festivo[item] | date:'MM']">
+                <li *ngIf="mes == '03'" class="list-group-item">{{ festivo[item] | date:'dd-MM-YYYY'}}
+                    <button mat-raised-button (click)="openDialog(  item,festivo[item] )" class="btn btn-outline-danger p-0 border-0 position-absolute top-0 end-0">
+                    <mat-icon aria-hidden="false" aria-label="Example home icon">delete</mat-icon>
+              </button>
+                </li>
+            </ul>
+        </div>
+        <hr>
+        <h3 class="text-danger">Abril</h3>
+        <div *ngFor="let item of festivo | keys;let i=index" class="">
+            <ul class="list-group" *ngFor="let mes of [festivo[item] | date:'MM']">
+                <li *ngIf="mes == '04'" class="list-group-item">{{ festivo[item] | date:'dd-MM-YYYY'}}
+                    <button mat-raised-button (click)="openDialog(  item,festivo[item] )" class="btn btn-outline-danger p-0 border-0 position-absolute top-0 end-0">
+                    <mat-icon aria-hidden="false" aria-label="Example home icon">delete</mat-icon>
+              </button>
+                </li>
+            </ul>
+        </div>
+        <hr>
+        <h3 class="text-danger">Mayo</h3>
+        <div *ngFor="let item of festivo | keys;let i=index" class="">
+            <ul class="list-group" *ngFor="let mes of [festivo[item] | date:'MM']">
+                <li *ngIf="mes == '05'" class="list-group-item">{{ festivo[item] | date:'dd-MM-YYYY'}}
+                    <button mat-raised-button (click)="openDialog(  item,festivo[item] )" class="btn btn-outline-danger p-0 border-0 position-absolute top-0 end-0">
+                    <mat-icon aria-hidden="false" aria-label="Example home icon">delete</mat-icon>
+              </button>
+                </li>
+            </ul>
+        </div>
+        <hr>
+        <h3 class="text-danger">Junio</h3>
+        <div *ngFor="let item of festivo | keys;let i=index" class="">
+            <ul class="list-group" *ngFor="let mes of [festivo[item] | date:'MM']">
+                <li *ngIf="mes == '06'" class="list-group-item">{{ festivo[item] | date:'dd-MM-YYYY'}}
+                    <button mat-raised-button (click)="openDialog(  item,festivo[item] )" class="btn btn-outline-danger p-0 border-0 position-absolute top-0 end-0">
+                    <mat-icon aria-hidden="false" aria-label="Example home icon">delete</mat-icon>
+              </button>
+                </li>
+            </ul>
+        </div>
+        <hr>
+        <h3 class="text-danger">Julio</h3>
+        <div *ngFor="let item of festivo | keys;let i=index" class="">
+            <ul class="list-group" *ngFor="let mes of [festivo[item] | date:'MM']">
+                <li *ngIf="mes == '07'" class="list-group-item">{{ festivo[item] | date:'dd-MM-YYYY'}}
+                    <button mat-raised-button (click)="openDialog(  item,festivo[item] )" class="btn btn-outline-danger p-0 border-0 position-absolute top-0 end-0">
+                    <mat-icon aria-hidden="false" aria-label="Example home icon">delete</mat-icon>
+              </button>
+                </li>
+            </ul>
+        </div>
+        <hr>
+        <h3 class="text-danger">Agosto</h3>
+        <div *ngFor="let item of festivo | keys;let i=index" class="">
+            <ul class="list-group" *ngFor="let mes of [festivo[item] | date:'MM']">
+                <li *ngIf="mes == '08'" class="list-group-item">{{ festivo[item] | date:'dd-MM-YYYY'}}
+                    <button mat-raised-button (click)="openDialog( item, festivo[item] )" class="btn btn-outline-danger p-0 border-0 position-absolute top-0 end-0">
+                    <mat-icon aria-hidden="false" aria-label="Example home icon">delete</mat-icon>
+              </button>
+                </li>
+            </ul>
+        </div>
+        <hr>
+        <h3 class="text-danger">Septiembre</h3>
+        <div *ngFor="let item of festivo | keys;let i=index" class="">
+            <ul class="list-group" *ngFor="let mes of [festivo[item] | date:'MM']">
+                <li *ngIf="mes == '09'" class="list-group-item">{{ festivo[item] | date:'dd-MM-YYYY'}}
+                    <button mat-raised-button (click)="openDialog( item, festivo[item] )" class="btn btn-outline-danger p-0 border-0 position-absolute top-0 end-0">
+                    <mat-icon aria-hidden="false" aria-label="Example home icon">delete</mat-icon>
+              </button>
+                </li>
+            </ul>
+        </div>
+        <hr>
+        <h3 class="text-danger">Octubre</h3>
+        <div *ngFor="let item of festivo | keys;let i=index" class="">
+            <ul class="list-group" *ngFor="let mes of [festivo[item] | date:'MM']">
+                <li *ngIf="mes == '10'" class="list-group-item">{{ festivo[item] | date:'dd-MM-YYYY'}}
+                    <button mat-raised-button (click)="openDialog( item, festivo[item] )" class="btn btn-outline-danger p-0 border-0 position-absolute top-0 end-0">
+                    <mat-icon aria-hidden="false" aria-label="Example home icon">delete</mat-icon>
+              </button>
+                </li>
+            </ul>
+        </div>
+        <hr>
+        <h3 class="text-danger">Noviembre</h3>
+        <div *ngFor="let item of festivo | keys;let i=index" class="">
+            <ul class="list-group" *ngFor="let mes of [festivo[item] | date:'MM']">
+                <li *ngIf="mes == '11'" class="list-group-item">{{ festivo[item] | date:'dd-MM-YYYY'}}
+                    <button mat-raised-button (click)="openDialog( item, festivo[item] )" class="btn btn-outline-danger p-0 border-0 position-absolute top-0 end-0">
+                    <mat-icon aria-hidden="false" aria-label="Example home icon">delete</mat-icon>
+              </button>
+                </li>
+            </ul>
+        </div>
+        <hr>
+        <h3 class="text-danger">Diciembre</h3>
+        <div *ngFor="let item of festivo | keys;let i=index" class="">
+            <ul class="list-group" *ngFor="let mes of [festivo[item] | date:'MM']">
+                <li *ngIf="mes == '12'" class="list-group-item">{{ festivo[item] | date:'dd-MM-YYYY'}}
+                    <button mat-raised-button (click)="openDialog( item, festivo[item] )" class="btn btn-outline-danger p-0 border-0 position-absolute top-0 end-0">
+                    <mat-icon aria-hidden="false" aria-label="Example home icon">delete</mat-icon>
+              </button>
+                </li>
+            </ul>
+        </div>
+        <hr>
+    </div>
+
+</div>

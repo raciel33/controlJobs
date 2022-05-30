@@ -20,6 +20,9 @@ import { HistoricoComponent } from './components/historico/historico.component';
 import { ModalCalendarComponent } from './components/modal-calendar/modal-calendar.component';
 import { GraphicComponent } from './components/graphic/graphic.component';
 import { CalendarioComponent } from './components/calendario/calendario.component';
+import { ConfirmationComponent } from './components/confirmation/confirmation.component';
+import { TotalHorasComponent } from './components/total-horas/total-horas.component';
+import { MesesComponent } from './components/meses/meses.component';
 
 //servicio
 import { ControlJobsServiceService } from './services/control-jobs-service.service';
@@ -32,6 +35,8 @@ import { MatInputModule } from '@angular/material/input';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatNativeDateModule} from '@angular/material/core';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+import {MatMenuModule} from '@angular/material/menu';
 
 //graficos
 import { ChartsModule } from 'ng2-charts';
@@ -41,6 +46,8 @@ import { environment } from './../environments/environment';
 
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { KeysPipe } from './pipes/keys.pipe';
+
 
 
 
@@ -51,7 +58,9 @@ const materialModules = [
   MatInputModule,
   MatDialogModule,
   MatDatepickerModule,
-  MatNativeDateModule
+  MatNativeDateModule,
+  MatSnackBarModule,
+  MatMenuModule
 
 ];
 @NgModule({
@@ -63,7 +72,12 @@ const materialModules = [
     HistoricoComponent,
     ModalCalendarComponent,
     GraphicComponent,
-    CalendarioComponent
+    CalendarioComponent,
+    KeysPipe,
+    ConfirmationComponent,
+    TotalHorasComponent,
+    MesesComponent,
+
   ],
   imports: [
     BrowserModule,

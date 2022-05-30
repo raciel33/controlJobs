@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ControlJobsServiceService } from '../../services/control-jobs-service.service';
 
 @Component({
   selector: 'app-historico',
@@ -7,7 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HistoricoComponent implements OnInit {
 
-  constructor() { }
+
+  meses = ['enero','febrero','marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre']
+
+  constructor( private _controlService:ControlJobsServiceService
+    ) {
+
+    }
 
   ngOnInit(): void {
   }

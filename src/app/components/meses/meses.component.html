@@ -1,0 +1,48 @@
+<h1 class="text-center fw-bold mt-3"> {{ id | uppercase }} </h1>
+<div class="card p-3">
+    <table class="table table-striped table-hover ">
+        <thead>
+            <tr>
+                <th scope="col">Días</th>
+                <th scope="col">Unidad</th>
+                <th scope="col">Precio/Ud</th>
+                <th scope="col">Total</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th class="text-success" scope="row">Sabados</th>
+                <td>{{sabado}}</td>
+                <td>{{precioSabado}}</td>
+                <td>{{totalSabado}}</td>
+            </tr>
+            <tr>
+                <th class="text-success" scope="row">Domingos</th>
+                <td>{{domingo}}</td>
+                <td>{{precioDomingo}}</td>
+                <td>{{totalDomingo}}</td>
+            </tr>
+            <tr>
+                <th class="text-success" scope="row">Doblajes</th>
+                <td>{{doblaje}}</td>
+                <td>{{precioDoblaje}}</td>
+                <td>{{totalDoblaje}}</td>
+            </tr>
+            <tr>
+                <th class="text-success" scope="row">Festivos</th>
+                <td>{{festivo}}</td>
+                <td>{{precioFestivo}}</td>
+                <td>{{totalFestivo}}</td>
+
+            </tr>
+
+
+
+        </tbody>
+
+    </table>
+    <div class="col text-end text-primary">
+        Total del mes:
+        <span class="text-success">{{totalMes | currency:'EUR'}}</span>
+    </div>
+</div>

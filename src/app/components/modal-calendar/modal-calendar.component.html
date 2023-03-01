@@ -1,0 +1,73 @@
+<app-navbar>
+</app-navbar>
+<div class="card-group main-container">
+    <div class="card">
+        <div class="card-body">
+            <mat-calendar class="demo-inline-calendar-card bg-body text-black" [(selected)]="selected"></mat-calendar>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-body">
+            <!--Boton para ir seleccionando los sabados que se van a añadir-->
+            <button (click)="anadir()" type="button" class="btn btn-outline-primary">
+          Añadir</button>
+            <h2 class="card-title text-center text-danger"> Horas Extras</h2>
+
+            <table class="table  table table-hover">
+                <thead class="thead-inverse">
+                </thead>
+                <tbody>
+                    <tr *ngFor="let item of valor;let i = index">
+                        <td class="text-primary">{{ item | date }} </td>
+                        <td>
+                            <button (click)="guardar(i)" type="submit" class="btn btn-primary">
+                                Guardar</button>
+                            <button (click)="eliminar(i)" type="button" class="btn btn-outline-danger mx-1">
+                                Eliminar
+                           </button>
+
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+
+        </div>
+
+    </div>
+    <div class="card" style="height: 400px; overflow: scroll">
+        <div class="card-body ">
+            <app-total-horas></app-total-horas>
+
+        </div>
+
+
+    </div>
+
+</div>
+
+
+
+<div class="row row-cols-1 row-cols-md-2 g-4">
+    <div class="col">
+        <div class="card">
+            <h4 class="card-title text-center text-danger">{{id}}s Trabajados</h4>
+            <div class="card-body">
+                <div style="display: block;">
+                    <canvas baseChart [datasets]="lineChartData" [labels]="lineChartLabels" [options]="lineChartOptions" [plugins]="lineChartPlugins" [legend]="lineChartLegend" [chartType]="lineChartType">
+      </canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card">
+            <h4 class="card-title text-center text-success">Dinero en horas extras: {{id}}s </h4>
+            <div class="card-body">
+                <div style="display: block;">
+                    <canvas baseChart [datasets]="PolarChartData2" [labels]="PolarChartLabels2" [options]="PolarChartOptions2" [plugins]="PolarChartPlugins2" [legend]="PolarChartLegend2" [chartType]="PolarChartType2">
+  </canvas>
+                </div>
+            </div>
+        </div>
+    </div>

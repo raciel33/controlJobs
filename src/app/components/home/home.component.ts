@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
+import { ControlJobsServiceService } from '../../services/control-jobs-service.service';
 
 @Component({
   selector: 'app-home',
@@ -6,10 +8,31 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+  hidden = false;
 
-  constructor() { }
+  noche:boolean = false ;
+  hora:Date = new Date()
 
-  ngOnInit(): void {
+
+
+   constructor(private _controlServices:ControlJobsServiceService) {
+ //controlamos el aspecto que tendra la pantalla blanco o negro
+ if( this.hora.getHours() > 20){
+  this.noche = true;
+ }else{
+  this.noche = false;
+ }
+
+
   }
+
+
+ngOnInit(): void {
+
+
+}
+
+
+
 
 }

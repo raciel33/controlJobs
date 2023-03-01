@@ -1,0 +1,34 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark mt-3">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">Home</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+
+                <li class="nav-item">
+                    <a class="nav-link active" href="#" [routerLink]="['/historico']">Historico</a>
+                </li>
+                <li class="nav-item ">
+                    <button class="text-success" mat-button [matMenuTriggerFor]="menu">Meses</button>
+                    <mat-menu #menu="matMenu">
+                        <button mat-menu-item [routerLink]="['/meses','enero' ]"> Enero </button>
+                        <button mat-menu-item [routerLink]="['/meses','febrero' ]">Febrero</button>
+                        <button mat-menu-item [routerLink]="['/meses','marzo' ]"> Marzo </button>
+                        <button mat-menu-item [routerLink]="['/meses','abril' ]">Abril</button>
+                        <button mat-menu-item [routerLink]="['/meses','mayo' ]"> Mayo </button>
+                        <button mat-menu-item [routerLink]="['/meses','junio' ]">Junio</button>
+                        <button mat-menu-item [routerLink]="['/meses','julio' ]"> Julio </button>
+                        <button mat-menu-item [routerLink]="['/meses','agosto' ]">Agosto</button>
+                        <button mat-menu-item [routerLink]="['/meses','septiembre' ]"> Septiembre </button>
+                        <button mat-menu-item [routerLink]="['/meses','octubre' ]">Octubre</button>
+                        <button mat-menu-item [routerLink]="['/meses','noviembre' ]"> Noviembre </button>
+                        <button mat-menu-item [routerLink]="['/meses','diciembre' ]">Diciembre</button>
+
+                    </mat-menu>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
